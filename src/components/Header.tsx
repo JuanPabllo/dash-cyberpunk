@@ -1,5 +1,5 @@
-import { Flex, Text, Input, Icon } from '@chakra-ui/react';
-import { Search2Icon } from '@chakra-ui/icons';
+import { Flex, Text, Input, HStack, Box, Avatar } from '@chakra-ui/react';
+import { SearchIcon, BellIcon, PlusSquareIcon } from '@chakra-ui/icons';
 
 export function Header() {
   return (
@@ -43,7 +43,36 @@ export function Header() {
             color: 'gray.400',
           }}
         />
-        <Search2Icon w={6} h={6} />
+        <SearchIcon w={6} h={6} />
+      </Flex>
+      <Flex align="center" ml="auto">
+        <HStack
+          spacing="8"
+          mx="8"
+          pr="8"
+          py="1"
+          color="gray.300"
+          borderRightWidth={1}
+          borderColor="gray.700"
+        >
+          <BellIcon />
+          <PlusSquareIcon />
+        </HStack>
+
+        <Flex align="center">
+          <Box mr="4" textAlign="right">
+            <Text>Juan Pablo</Text>
+            <Text color="gray.300" fontSize="small">
+              juanpablo.codes@gmal.com
+            </Text>
+          </Box>
+
+          <Avatar
+            size="md"
+            name="Juan Pablo"
+            src="https://www.github.com/juanpabllo.png"
+          />
+        </Flex>
       </Flex>
     </Flex>
   );
